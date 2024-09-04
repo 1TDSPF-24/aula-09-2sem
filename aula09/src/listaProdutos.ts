@@ -39,3 +39,7 @@ export const listaProdutos:TipoListaObj[] = [
         imagem:"/img/produto-640×320.png",
     },
 ];
+
+if(!localStorage.getItem("lista")){
+    localStorage.setItem("lista", JSON.stringify(listaProdutos));
+} 
