@@ -1,7 +1,8 @@
 import { TipoListaObj } from "./types";
 
 //Criar uma lista de objetos de Produtos Eletrônicos
-export const listaProdutos:TipoListaObj[] = [    {
+export const listaProdutos:TipoListaObj[] = [   
+     {
         id: 1,
         nome: "Smartphone",
         preco: 1500.00,
@@ -38,3 +39,7 @@ export const listaProdutos:TipoListaObj[] = [    {
         imagem:"/img/produto-640×320.png",
     },
 ];
+
+if(!localStorage.getItem("lista")){
+    localStorage.setItem("lista", JSON.stringify(listaProdutos))
+}
