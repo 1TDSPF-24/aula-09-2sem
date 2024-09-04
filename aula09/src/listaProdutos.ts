@@ -1,6 +1,9 @@
+import { tipoListaObj } from "./type";
+
+
 
 //Criar uma lista de objetos de Produtos Eletrônicos
-export const listaProdutos = [
+export const listaProdutos: tipoListaObj[] = [
     {
         id: 1,
         nome: "Smartphone",
@@ -38,3 +41,6 @@ export const listaProdutos = [
         imagem:"/img/produto-640×320.png",
     },
 ];
+
+
+localStorage.setItem("lista", JSON.stringify(listaProdutos));

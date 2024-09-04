@@ -7,7 +7,7 @@ export default function Menu(){
         <MenuList>
             <MenuItem> <Link to="/"><MenuLink>Home</MenuLink></Link></MenuItem>
             <MenuItem><Link to="/produtos"><MenuLink>Produtos</MenuLink></Link></MenuItem>
-            <MenuItem><Link to="/editar/produtos/1"><MenuLink>Editar Produto - 1</MenuLink></Link></MenuItem>
+          
         </MenuList>
       </Nav>
     );
