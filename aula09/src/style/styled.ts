@@ -60,3 +60,10 @@ export const MenuLink = styled.a`
   padding: 10px 20px;
   display: block;
 `
+// Estilizando a Imagem
+export const ImgProdutos = styled.img`
+  display:block;
+  max-width:100%;
+  width:20%;
+  margin:0 auto;
+`

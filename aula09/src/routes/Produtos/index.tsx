@@ -1,19 +1,17 @@
 import { Link } from "react-router-dom";
 import { listaProdutos } from "../../listaProdutos";
-import styled from "styled-components";
-
-
-const ImgProdutos = styled.img`
-  display:block;
-  max-width:100%;
-  width:20%;
-  margin:0 auto;
-`
+import { ImgProdutos } from "../../style/styled";
+import { useState } from "react";
 
 export default function Produtos(){
 
       //MUDANDO O TÍTULO DA PÁGINA!!!
-      document.title = "PRODUTOS";
+    document.title = "PRODUTOS";
+    
+    const listaProdutosString = localStorage.getItem("lista") || '[]';
+    // const lista = JSON.parse(listaProdutosString);
+
+    const [produtos] = useState(JSON.parse(listaProdutosString))
 
     return(
       <div>
