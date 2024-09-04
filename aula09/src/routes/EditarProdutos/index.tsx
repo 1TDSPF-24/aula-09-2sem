@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditarProdutos(){
@@ -12,11 +13,28 @@ export default function EditarProdutos(){
       // const{dados} = useParams(), um detalhe aqui é que o useParams() pertence ao react-router e deve ser importado dele
       const {id} = useParams();
 
+      useEffect(() => {
+        console.log("O ID foi atualizado : ", id)
+      }, [id])
+
+      useEffect(() => {
+        console.log("Monitorando o componente apenas uma vez...")
+      }, [])
+
+      useEffect(() => {
+        console.log("Monitorando o componente todas as vezes...", contador)
+      })
+
+      const [contador,setContador] = useState(0);
+
       return(
       <div>
-        <h1>Olá, mundo sou o EditarProdutos!</h1>
+        <h1>Editar Produtos!</h1>
         <div>
           <h2>ID: {id}</h2>
+          <div>
+            <button onClick={() => setContador(contador + 1)}>Contador - {contador}</button>
+          </div>
         </div>
       </div>
     );

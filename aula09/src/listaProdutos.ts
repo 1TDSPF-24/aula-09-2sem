@@ -1,6 +1,7 @@
+import { TipoListaObj } from "./types";
 
 //Criar uma lista de objetos de Produtos Eletrônicos
-export const listaProdutos = [
+export const listaProdutos:TipoListaObj[] = [
     {
         id: 1,
         nome: "Smartphone",
@@ -38,3 +39,9 @@ export const listaProdutos = [
         imagem:"/img/produto-640×320.png",
     },
 ];
+
+// criar estrutura para absorver essa lista engessada
+// jogar conteúdo no local storage
+if(!localStorage.getItem("lista")){ //existe algum objeto chamado lista dentro de vc?
+    localStorage.setItem("lista", JSON.stringify(listaProdutos))
+}
