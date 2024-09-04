@@ -1,7 +1,7 @@
+import { TipoListaObj } from "./types";
 
 //Criar uma lista de objetos de Produtos Eletrônicos
-export const listaProdutos = [
-    {
+export const listaProdutos:TipoListaObj[] = [    {
         id: 1,
         nome: "Smartphone",
         preco: 1500.00,
