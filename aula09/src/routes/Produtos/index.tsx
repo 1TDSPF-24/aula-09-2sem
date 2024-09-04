@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 import { ImgProdutos } from "../../style/styled";
-// import { useState } from "react";
-// import { TipoListaObj } from "../../types";
-import { listaProdutos } from "../../listaProdutos";
+import { useState } from "react";
+import { TipoListaObj } from "../../types";
 
 export default function Produtos(){
 
       //MUDANDO O TÍTULO DA PÁGINA!!!
       document.title = "PRODUTOS";
 
-      // const listaProdutosString = localStorage.getItem("lista") || '[]';
-      // // const lista = JSON.parse(listaProdutosString);
-      // const [produtos] = useState<TipoListaObj[]>(JSON.parse(listaProdutosString));
+      const listaProdutosString = localStorage.getItem("lista") || '[]';
+      // const lista = JSON.parse(listaProdutosString);
+      const [produtos] = useState<TipoListaObj[]>(JSON.parse(listaProdutosString));
 
     return(
       <div>
@@ -29,7 +28,7 @@ export default function Produtos(){
             </tr>
           </thead>
           <tbody>
-              {listaProdutos.map((produto)=>(
+              {produtos.map((produto)=>(
                 <tr key={produto.id}>
                     <td>{produto.nome}</td>
                     <td>{produto.preco}</td>
@@ -46,7 +45,7 @@ export default function Produtos(){
           <tfoot>
             <tr>
               <td colSpan={7}>
-                Total de registros : <span>{listaProdutos.length}</span>
+                Total de registros : <span>{produtos.length}</span>
               </td>
             </tr>
           </tfoot>
