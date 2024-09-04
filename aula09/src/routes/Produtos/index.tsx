@@ -4,7 +4,7 @@ import { useState } from "react";
 import { TipoListaObj } from "../../types";
 import { listaProdutos } from "../../listaProdutos";
 
-export default function Produtos(){
+export default function Produtos(){ 
 
       //MUDANDO O TÍTULO DA PÁGINA!!!
     document.title = "PRODUTOS";
