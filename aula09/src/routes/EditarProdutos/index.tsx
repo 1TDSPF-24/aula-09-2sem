@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditarProdutos(){
@@ -11,6 +12,10 @@ export default function EditarProdutos(){
       //Então teriamos que realizar a seguinte ação para receber esta informação.
       // const{dados} = useParams(), um detalhe aqui é que o useParams() pertence ao react-router e deve ser importado dele
       const {id} = useParams();
+
+      useEffect(()=>{
+        console.log('O ID foi atualizado: ' id:)
+      },[])
 
       return(
       <div>
